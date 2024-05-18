@@ -12,6 +12,11 @@ local MainSection = Main:NewSection("Main")
 local PlayerSection = Player:NewSection("Player")
 local ScriptsSection = Scripts:NewSection("Scripts")
 
+-- TOGGLE UI
+MainSection:NewKeybind("Toggle UI", "toggles ui", Enum.KeyCode.F, function()
+    Library:ToggleUI()
+end)
+
 -- BUTTONS
 PlayerSection:NewButton("Sit", "sit", function()
     game.Players.LocalPlayer.Character.Humanoid.Sit = true
