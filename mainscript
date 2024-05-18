@@ -1,0 +1,57 @@
+-- MAIN
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("X Scripts", "DarkTheme")
+
+-- WINDOWS
+local Main = Window:NewTab("Main")
+local Player = Window:NewTab("Player")
+local Scripts = Window:NewTab("Scripts")
+
+-- SECTIONS
+local MainSection = Main:NewSection("Main")
+local PlayerSection = Player:NewSection("Player")
+local ScriptsSection = Scripts:NewSection("Scripts")
+
+-- BUTTONS
+PlayerSection:NewButton("Sit", "sit", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+end)
+
+MainSection:NewButton("Rejoin", "rejoin the server", function()
+    local ts = game:GetService("TeleportService")
+local p = game:GetService("Players").LocalPlayer
+ts:Teleport(game.PlaceId, p)
+end)
+
+ScriptsSection:NewButton("Infinite Yield", "universal commands", function()
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"), true))()
+end)
+
+ScriptsSection:NewButton("Quick Fly [E]", "[E] fly", function()
+    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
+end)
+
+ScriptsSection:NewButton("Universal Aim-LOCK [R CLICK]", "[R CLICK] universal aim-lock", function()
+    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20Aimbot.txt"))()
+end)
+
+ScriptsSection:NewButton("ESP", "esp", function()
+   loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20ESP.txt"))()
+end)
+
+ScriptsSection:NewButton("Day/Night Toggle", "toggles night and day time", function()
+    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Night%20Time%20Toggle.txt"))()
+end)
+
+-- SLIDERS
+PlayerSection:NewSlider("WalkSpeed", "customize your walkspeed", 500, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("JumpPower", "customize your jumppower", 500, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+PlayerSection:NewSlider("Health", "customize your health", 500, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.Health = s
+end)
