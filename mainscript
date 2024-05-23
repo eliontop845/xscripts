@@ -32,18 +32,6 @@ ScriptsSection:NewButton("Infinite Yield", "universal commands", function()
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"), true))()
 end)
 
-ScriptsSection:NewButton("Quick Fly [E]", "[E] fly", function()
-    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
-end)
-
-ScriptsSection:NewButton("Universal Aim-LOCK [R CLICK]", "[R CLICK] universal aim-lock", function()
-    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20Aimbot.txt"))()
-end)
-
-ScriptsSection:NewButton("ESP", "esp", function()
-   loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20ESP.txt"))()
-end)
-
 ScriptsSection:NewButton("Day/Night Toggle", "toggles night and day time", function()
     loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Night%20Time%20Toggle.txt"))()
 end)
